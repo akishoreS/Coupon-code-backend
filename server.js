@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
-
+console.log("hello world")
 let coupons = [];
 
 app.post('/api/coupons', (req, res) => {
