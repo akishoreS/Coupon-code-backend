@@ -2,11 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "/server.js",
+      "src": "coupon-creation-backend/server.js",
       "use": "@vercel/node"
     },
     {
-      "src": "/package.json",
+      "src": "coupon-creation/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build"
@@ -16,11 +16,11 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server.js"
+      "dest": "coupon-creation/server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/build/index.html"
+      "dest": "coupon-creation/build/index.html"
     }
   ]
 }
